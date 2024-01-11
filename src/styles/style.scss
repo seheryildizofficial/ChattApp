@@ -100,8 +100,8 @@ button {
 
 .chat-page {
   background: white;
-  height: 70vh;
-  width: 70vw;
+  height: 100vh;
+  width: 60vw;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -109,6 +109,7 @@ button {
   max-width: 800px;
   border-radius: 10px;
   overflow: hidden;
+  background-image: url(/public/massage-bg.jpeg);
 
   @media (max-width: 650px) {
     width: 100vw;
@@ -118,34 +119,79 @@ button {
 }
 
 .chat-page header {
-  background: #4d4c7d;
+  background: #1f2c34;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 
   button {
-    background: #f99;
+    background: #005d4b;
   }
 }
 
 .chat-page form {
   display: flex;
   justify-content: center;
-  background: #4d4c7d;
+  background: #1f2c34;
   padding: 10px;
   gap: 20px;
 
-  input {
-    width: 50%;
-    border-radius: 10px;
-    border: none;
+  .input2 {
+    width: 90%;
+    border-radius: 30px;
     padding: 5px 10px;
     font-size: 15px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.57);
+    background-color: white;
+  }
+  .input2:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 242, 244, 0.952);
   }
 
   button {
-    background: #f99;
+    background: #005d4b;
+    border-radius: 10px;
+    width: 35px;
   }
+}
+
+.chat-page main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.msg-other {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  background-color: white;
+  border-radius: 30px;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
+//benim mesajlar
+.msg-user {
+  background: #e1ffc7;
+  align-self: flex-end;
+  padding: 10px 8px;
+  color: black;
+  border-radius: 7px 7px 0 7px;
 }

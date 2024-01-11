@@ -1,8 +1,8 @@
 import { useState } from "react";
 import AuthPage from "./pages/AuthPage.jsx";
 import RoomPage from "./pages/RoomPage.jsx";
-import "./styles/style.scss";
 import ChatPage from "./pages/ChatPage.jsx";
+import "./styles/style.scss";
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("TOKEN"));
