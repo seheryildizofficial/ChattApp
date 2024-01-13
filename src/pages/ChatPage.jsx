@@ -5,6 +5,9 @@ import {
   addDoc,
   serverTimestamp,
   onSnapshot,
+  query,
+  orderBy,
+  where,
 } from "firebase/firestore";
 import { auth, db } from "../firebase/Config";
 import { useEffect, useState } from "react";
@@ -25,10 +28,18 @@ const ChatPage = ({ room, setRoom }) => {
       },
       createdAt: serverTimestamp(),
     });
+    e.target.reset();
   };
   useEffect(() => {
     const messagesCol = collection(db, "messages");
-    onSnapshot(messagesCol, (snapshot) => {
+    //filtreleme ayarları
+    const q = query(
+      messagesCol,
+      where("room", "==", room),
+      orderBy("createdAt", "asc")
+    );
+
+    onSnapshot(q, (snapshot) => {
       const tempMsg = [];
       snapshot.docs.forEach((doc) => {
         tempMsg.push(doc.data());
@@ -43,7 +54,7 @@ const ChatPage = ({ room, setRoom }) => {
       <header>
         <p>{auth.currentUser?.displayName}</p>
         <p>{room}</p>
-        <button>Farklı Oda</button>
+        <button onClick={() => setRoom(null)}>Farklı Oda</button>
       </header>
       <main>
         {messages.map((data, i) => (

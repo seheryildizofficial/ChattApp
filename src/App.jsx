@@ -14,7 +14,11 @@ const App = () => {
   //kullanıcı yetsikisi varsa oda seçme sayfası
   return (
     <div className="container">
-      {room ? <ChatPage room={room} /> : <RoomPage setRoom={setRoom} />}
+      {room ? (
+        <ChatPage room={room} />
+      ) : (
+        <RoomPage setRoom={setRoom} setIsAuth={setIsAuth} />
+      )}
     </div>
   );
 };
