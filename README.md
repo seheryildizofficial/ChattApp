@@ -10,3 +10,6 @@
 - Çoklu Odalar: Kullanıcılar, ilgi alanlarına veya konulara göre oluşturulmuş farklı odalara katılabilirler.
 - Gerçek Zamanlı Sohbet: Firebase gerçek zamanlı veritabanı kullanılarak, kullanıcılar anında mesajları görebilir ve paylaşabilirler.
 - Kullanıcı Yönetimi: Firebase Authentication, kullanıcıların kaydolmasını, giriş yapmasını sağlar.
+
+![Gif](/public/chatapp.gif)
+# ChattApp
