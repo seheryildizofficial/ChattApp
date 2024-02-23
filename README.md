@@ -1,4 +1,4 @@
-# Kütüphaneler
+# Teknolojiler
 
 - Sass: Stil özellikleri için kullanıldı.
 - Firebase: Oturum yönetimi ve gerçek zamanlı veritabanı için kullanıldı.
